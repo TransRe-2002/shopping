@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="430b7cc3-16ea-439a-9569-803f8b055ce9" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mariadb-java-client-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commodity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DBDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Express.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Trade.java" afterDir="false" />
+    <list default="true" id="430b7cc3-16ea-439a-9569-803f8b055ce9" name="变更" comment="null">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Express.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Express.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +74,16 @@
       <updated>1655168942573</updated>
       <workItem from="1655168943955" duration="5268000" />
       <workItem from="1655300640974" duration="7544000" />
-      <workItem from="1655342707337" duration="2523000" />
+      <workItem from="1655342707337" duration="7231000" />
     </task>
+    <task id="LOCAL-00001" summary="null">
+      <created>1655346740691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655346740691</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,5 +99,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="null" />
+    <option name="LAST_COMMIT_MESSAGE" value="null" />
   </component>
 </project>

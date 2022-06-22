@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="430b7cc3-16ea-439a-9569-803f8b055ce9" name="变更" comment="null">
+      <change afterPath="$PROJECT_DIR$/src/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Express.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Express.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,10 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,12 +50,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/transen5/IdeaProjects/shopping&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/transen5/IdeaProjects/shopping/lib/mariadb-java-client-3.0.4.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
@@ -63,6 +71,30 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="未命名" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="shopping" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="shopping" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.未命名" />
+      <item itemvalue="应用程序.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -73,7 +105,15 @@
       <updated>1655168942573</updated>
       <workItem from="1655168943955" duration="5268000" />
       <workItem from="1655300640974" duration="7544000" />
-      <workItem from="1655342707337" duration="10589000" />
+      <workItem from="1655342707337" duration="10810000" />
+      <workItem from="1655440769203" duration="612000" />
+      <workItem from="1655453736887" duration="5083000" />
+      <workItem from="1655548947862" duration="4157000" />
+      <workItem from="1655599595293" duration="24616000" />
+      <workItem from="1655682072897" duration="1615000" />
+      <workItem from="1655724110347" duration="1277000" />
+      <workItem from="1655789616496" duration="9259000" />
+      <workItem from="1655859870916" duration="1912000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1655346740691</created>
@@ -89,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655353077638</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="null">
+      <created>1655366220833</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655366220833</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

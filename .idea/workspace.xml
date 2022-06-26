@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="430b7cc3-16ea-439a-9569-803f8b055ce9" name="变更" comment="null">
-      <change afterPath="$PROJECT_DIR$/src/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommodityDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,12 @@
       <workItem from="1655682072897" duration="1615000" />
       <workItem from="1655724110347" duration="1277000" />
       <workItem from="1655789616496" duration="9259000" />
-      <workItem from="1655859870916" duration="1912000" />
+      <workItem from="1655859870916" duration="7781000" />
+      <workItem from="1655906456417" duration="4803000" />
+      <workItem from="1656128479710" duration="2178000" />
+      <workItem from="1656165153670" duration="1804000" />
+      <workItem from="1656207762295" duration="9380000" />
+      <workItem from="1656244171855" duration="467000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1655346740691</created>
@@ -136,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655366220833</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="null">
+      <created>1655866524088</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655866524088</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

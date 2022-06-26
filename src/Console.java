@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 public class Console extends DBDao implements Runnable
 {
     private void login() throws IOException,SQLException
@@ -26,7 +25,7 @@ public class Console extends DBDao implements Runnable
             }
             else
             {
-                System.out.println("用户名或密码有误！重试(r),退出(q):");
+                System.out.println("用户名或密码有误！重试(r)，退出(q):");
                 while(true)
                 {
                     char choose = reader.readLine().toLowerCase().charAt(0);

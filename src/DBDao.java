@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,5 +27,28 @@ public abstract class DBDao
     public static Connection getConnection()
     {
         return conn;
+    }
+
+    public static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static int getIntNumber()
+    {
+        int IntNumber;
+        while (true)
+        {
+            try {
+                IntNumber = Integer.parseInt(reader.readLine());
+                break;
+            }
+            catch (IOException e)
+            {
+                System.err.println("输入有误！");
+                e.printStackTrace();
+            }
+            catch (NumberFormatException e)
+            {
+                System.err.println("输入数字有误请重试！");
+            }
+        }
+        return IntNumber;
     }
 }

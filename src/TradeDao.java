@@ -1,7 +1,5 @@
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 
 public class TradeDao extends DBDao
@@ -310,5 +308,41 @@ public class TradeDao extends DBDao
             System.out.println("出现错误，即将退出该选项！");
             return false;
         }
+    }
+
+    public static boolean printTrade()
+    {
+        try
+        {
+            PreparedStatement pS = getConnection().prepareStatement("SELECT * FROM Trade");
+            ResultSet rS = pS.executeQuery();
+            ResultSetMetaData rSMD = rS.getMetaData();
+            System.out.println
+                    (
+                            rSMD.getColumnName(1) + "\t\t" +
+                                    rSMD.getColumnName(2) + "\t\t" +
+                                    rSMD.getColumnName(3) + "\t\t" +
+                                    rSMD.getColumnName(4) + "\t\t" +
+                                    rSMD.getColumnName(5) + "\t\t" +
+                                    rSMD.getColumnName(6) + "\t\t"
+                    );
+            while (rS.next())
+            {
+                System.out.println(
+                        rS.getInt(1) + "\t\t" +
+                        rS.getInt(2) + "\t\t" +
+                        rS.getInt(3) + "\t\t" +
+                        rS.getInt(4) + "\t\t" +
+                        String.format("%-10s", rS.getDate(5).toString()) + "...\t" +
+                        rS.getInt(6) + "\t\t"
+                        );
+            }
+        }
+        catch (SQLException e)
+        {
+            System.err.println("数据库连接失败");
+            e.printStackTrace();
+        }
+        return true;
     }
 }

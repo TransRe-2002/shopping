@@ -58,7 +58,7 @@ public class ExpressDao extends DBDao
         }
     }
 
-    public static boolean deleteCustomer()
+    public static boolean deleteExpress()
     {
         System.out.println("输入要删除的快递的编号：");
         int Eno = inputEno();

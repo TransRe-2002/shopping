@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -16,13 +14,13 @@ public class CustomerDao extends DBDao
             Cuno = getIntNumber();
             var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Customer WHERE Cuno = ? LIMIT 1");
             pS.setInt(1, Cuno);
-            var result = pS.executeUpdate();
-            while (result < 1)
+            var result = pS.executeQuery();
+            while (result.next())
             {
                 System.out.println("客户编号不存在，请重新输入！");
                 Cuno = getIntNumber();
                 pS.setInt(1,Cuno);
-                result = pS.executeUpdate();
+                result = pS.executeQuery();
             }
         }
         catch (SQLException e)
@@ -35,7 +33,7 @@ public class CustomerDao extends DBDao
 
     public static boolean searchCustomer()
     {
-        System.out.println("输入要查询的客户的编号");
+        System.out.println("输入要查询的客户的编号：");
         int Cuno = inputCuno();
         PreparedStatement pS = null;
         Customer cust = null;
@@ -112,10 +110,10 @@ public class CustomerDao extends DBDao
                     System.out.println("请输入1--4内的有效数字！");
                     System.out.println
                             (
-                                    "选择修改的项目：\n" +
-                                            "1:客户编号：\n" +
-                                            "2:客户名称：\n" +
-                                            "3:客户电话：\n" +
+                                    "选择修改的项目\n" +
+                                            "1:客户编号\n" +
+                                            "2:客户名称\n" +
+                                            "3:客户电话\n" +
                                             "4:取消修改"
                             );
                 }
@@ -203,7 +201,7 @@ public class CustomerDao extends DBDao
     }
     public static boolean insertCustomer()
     {
-        System.out.println("依次输入用户编号，姓名，电话号码：（空格分割）");
+        System.out.println("依次输入用户编号，姓名，电话号码（空格分割）：");
         PreparedStatement pS = null;
         String value = null;
         String[] row = null;

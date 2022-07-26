@@ -106,7 +106,7 @@ public class Trade extends DBDao
         }
         catch (SQLException e)
         {
-            return "商品号或客户号有误！";
+            return "数据库运行有误！";
         }
         return "交易编号：" + Trno + "\n客户名：" + Cuname + "\n商品名：" + Coname + "\n交易时间："
                 + OrderDate.toString() + "\n数量：" + Amount + "\n总价：" + TotalPrice;
@@ -124,10 +124,7 @@ public class Trade extends DBDao
             Cuno = result.getInt("Cuno");
             Amount = result.getInt("Amount");
             OrderDate = result.getDate("OrderDate").toLocalDate();
+            TotalPrice = result.getInt("TotalPrice");
         }
-        pS = getConnection().prepareStatement("SELECT Price FROM Commodity WHERE Cono = ?");
-        pS.setInt(1,Cono);
-        result = pS.executeQuery();
-        TotalPrice = result.getInt(1) * Amount;
     }
 }

@@ -14,13 +14,13 @@ public class CommodityDao extends DBDao
             Cono = getIntNumber();
             var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Commodity WHERE Cono = ? LIMIT 1");
             pS.setInt(1, Cono);
-            var result = pS.executeUpdate();
-            while (result < 1)
+            var result = pS.executeQuery();
+            while (result.next())
             {
                 System.out.println("商品编号不存在，请重新输入！");
                 Cono = getIntNumber();
                 pS.setInt(1,Cono);
-                result = pS.executeUpdate();
+                result = pS.executeQuery();
             }
         }
         catch (SQLException e)
@@ -309,7 +309,10 @@ public class CommodityDao extends DBDao
                     rSMD.getColumnName(4) + "\t\t" + rSMD.getColumnName(5));
             while (rS.next())
             {
-                System.out.println(rS.getInt(1) + "\t\t" + String.format("%-10s",rS.getString(2)) + "...\t" +
+                System.out.println
+                        (
+                                rS.getInt(1) + "\t\t" +
+                                        String.format("%-10s",rS.getString(2)) + "...\t" +
                         rS.getInt(3) + "\t\t" + rS.getString(4) + "\t\t" + rS.getInt(5));
             }
         }

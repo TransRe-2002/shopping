@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="430b7cc3-16ea-439a-9569-803f8b055ce9" name="变更" comment="null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commodity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommodityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommodityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Express.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Express.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExpressDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpressDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TradeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TradeDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +137,7 @@
       <workItem from="1658795315881" duration="759000" />
       <workItem from="1658821169660" duration="18420000" />
       <workItem from="1658878995404" duration="2660000" />
-      <workItem from="1658886963647" duration="2986000" />
+      <workItem from="1658886963647" duration="4285000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1655346740691</created>
@@ -203,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658850048874</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="null">
+      <created>1658890658083</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658890658083</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

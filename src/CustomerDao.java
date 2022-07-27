@@ -261,10 +261,19 @@ public class CustomerDao extends DBDao
             PreparedStatement pS = getConnection().prepareStatement("SELECT * FROM Customer");
             ResultSet rS = pS.executeQuery();
             ResultSetMetaData rSMD = rS.getMetaData();
-            System.out.println(rSMD.getColumnName(1) + "\t\t" + rSMD.getColumnName(2) + "\t\t" + rSMD.getColumnName(3));
+            System.out.println
+                    (
+                            rSMD.getColumnName(1) + "\t\t" +
+                                    rSMD.getColumnName(2) + "\t\t" +
+                                    rSMD.getColumnName(3)
+                    );
             while (rS.next())
             {
-                System.out.println(rS.getInt(1) + "\t\t" + String.format("%-10s",rS.getString(2)) + "\t\t" + rS.getInt(3));
+                System.out.println(
+                        rS.getInt(1) + "\t\t" +
+                                String.format("%-10s",rS.getString(2)) + "\t\t" +
+                                rS.getString(3)
+                );
             }
         }
         catch (SQLException e)

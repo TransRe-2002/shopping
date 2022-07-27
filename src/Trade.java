@@ -1,4 +1,5 @@
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -92,20 +93,24 @@ public class Trade extends DBDao
         String Cuname = null;
         try
         {
-            PreparedStatement pS = getConnection().prepareStatement("SELECT ? FROM ? WHERE ? = ?");
-            pS.setString(1,"Coname");
-            pS.setString(2,"Commodity");
-            pS.setString(3,"Cono");
-            pS.setInt(4,Cono);
-            Coname = pS.executeQuery().getString(1);
-            pS.setString(1,"Cuname");
-            pS.setString(2,"Customer");
-            pS.setString(3,"Cuno");
-            pS.setInt(4,Cuno);
-            Cuname = pS.executeQuery().getString(1);
+            PreparedStatement pS = getConnection().prepareStatement("SELECT Coname FROM Commodity WHERE Cono = ?");
+            pS.setInt(1,Cono);
+            ResultSet rs = pS.executeQuery();
+            while (rs.next() && rs.getString(1) != null)
+            {
+                Coname = rs.getString(1);
+            }
+            pS = getConnection().prepareStatement("SELECT Cuname FROM Customer WHERE Cuno = ?");
+            pS.setInt(1,Cuno);
+            rs = pS.executeQuery();
+            while (rs.next() && rs.getString(1) != null)
+            {
+                Cuname = rs.getString(1);
+            }
         }
         catch (SQLException e)
         {
+            e.printStackTrace();
             return "数据库运行有误！";
         }
         return "交易编号：" + Trno + "\n客户名：" + Cuname + "\n商品名：" + Coname + "\n交易时间："

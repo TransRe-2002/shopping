@@ -53,7 +53,7 @@ public class Customer extends DBDao
     @Override
     public String toString()
     {
-        return "客户信息：\n客户编号：" + Cuno + "\n客户名：" + Cuname + "\n" + "\n联系电话：" + Tel + "\n";
+        return "客户信息：\n客户编号：" + Cuno + "\n客户名：" + Cuname  + "\n联系电话：" + Tel + "\n";
     }
 
     public Customer(int Cuno) throws SQLException

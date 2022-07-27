@@ -83,12 +83,16 @@ public class Commodity extends DBDao
         {
             PreparedStatement pS = getConnection().prepareStatement("SELECT Bname FROM Brand WHERE Bno = ?");
             pS.setInt(1,Cono);
-            var r = pS.executeQuery();
-            brand = r.getString(1);
+            var rS = pS.executeQuery();
+            while (rS.next() && rS.getString(1) != null)
+            {
+                brand = rS.getString(1);
+            }
         }
         catch (SQLException e)
         {
-            return "商品品牌号异常，请检查";
+            e.printStackTrace();
+            return "数据库运行异常，请检查";
         }
         return "商品信息：\n商品编号：" + Cono + "\n商品名称：" + Coname +
                 "\n价格：" + Price + "\n商品种类：" + Category +

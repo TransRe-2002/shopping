@@ -20,7 +20,7 @@ public class Console extends DBDao implements Runnable
             pS.setString(1, admin);
             pS.setString(2, passwd);
             var result = pS.executeQuery();
-            if (result.next())
+            if (result.next() && result.getInt(1) == 1)
             {
                 System.out.println("欢迎进入购物管理系统！");
                 return;
@@ -54,11 +54,11 @@ public class Console extends DBDao implements Runnable
         System.out.println
                 (
                         "输入要修改的信息：\n" +
-                        "1.用户信息\n" +
-                        "2.商品信息\n" +
-                        "3.订单信息\n" +
-                        "4.快递信息\n" +
-                        "5.取消修改"
+                                "1.购物信息\n" +
+                                "2.用户信息\n" +
+                                "3.商品信息\n" +
+                                "4.快递信息\n" +
+                                "5.取消修改"
                 );
         int choose = Integer.parseInt(reader.readLine());
         while (choose > 5 || choose < 1 )
@@ -66,10 +66,10 @@ public class Console extends DBDao implements Runnable
             System.out.println("请重新输入！");
             System.out.println
                     (
-                            "输入要修改的信息：\n" +
-                                    "1.用户信息\n" +
-                                    "2.商品信息\n" +
-                                    "3.订单信息\n" +
+                            "输入要查询或修改的信息：\n" +
+                                    "1.购物信息\n" +
+                                    "2.用户信息\n" +
+                                    "3.商品信息\n" +
                                     "4.快递信息\n" +
                                     "5.取消修改"
                     );
@@ -91,7 +91,7 @@ public class Console extends DBDao implements Runnable
                                     "3:删除购物单号/用户信息/商品信息/快递单号，\n" +
                                     "4:添加购物单号/用户信息/商品信息/快递单号，\n" +
                                     "5:输出购物单号/用户信息/商品信息/快递单号信息，\n" +
-                                    "6:退出\n"
+                                    "6:退出"
                     );
             int choose = Integer.parseInt(reader.readLine());
             while (true)
@@ -109,7 +109,7 @@ public class Console extends DBDao implements Runnable
                                             "3:删除购物单号/用户信息/商品信息/快递单号，\n" +
                                             "4:添加购物单号/用户信息/商品信息/快递单号，\n" +
                                             "5:输出购物单号/用户信息/商品信息/快递单号信息，\n" +
-                                            "6:退出\n"
+                                            "6:退出"
                             );
                     choose = Integer.parseInt(reader.readLine());
                 }
@@ -178,7 +178,7 @@ public class Console extends DBDao implements Runnable
                                             "3:删除购物单号/用户信息/商品信息/快递单号，\n" +
                                             "4:添加购物单号/用户信息/商品信息/快递单号，\n" +
                                             "5:输出购物单号/用户信息/商品信息/快递单号信息，\n" +
-                                            "6:退出\n"
+                                            "6:退出"
                             );
                     choose = Integer.parseInt(reader.readLine());
                 }

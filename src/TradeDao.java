@@ -10,15 +10,15 @@ public class TradeDao extends DBDao
         try
         {
             Trno = getIntNumber();
-            var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Trade WHERE Trno = ?");
+            var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Trade WHERE Trno = ? LIMIT 1");
             pS.setInt(1,Trno);
-            var result = pS.executeUpdate();
-            while (result < 1)
+            var result = pS.executeQuery();
+            while (result.next() && result.getInt(1) != 1)
             {
                 System.out.println("订单编号不存在，请重新输入！");
                 Trno = getIntNumber();
                 pS.setInt(1,Trno);
-                result = pS.executeUpdate();
+                result = pS.executeQuery();
             }
         }
         catch (SQLException e)
@@ -31,7 +31,7 @@ public class TradeDao extends DBDao
 
     public static boolean searchTrade()
     {
-        System.out.println("输入要查询的客户的编号：");
+        System.out.println("输入要查询的订单的编号：");
         int Trno = inputTrno();
         PreparedStatement pS = null;
         Trade trade = null;
@@ -51,7 +51,7 @@ public class TradeDao extends DBDao
         }
         else
         {
-            System.out.println("客户编号不正确，没有该客户！");
+            System.out.println("订单编号不正确，没有该订单！");
             return false;
         }
     }
@@ -278,7 +278,7 @@ public class TradeDao extends DBDao
         {
             try
             {
-                pS = getConnection().prepareStatement("INSERT INTO Customer VALUES(?,?,?,?,?,?)");
+                pS = getConnection().prepareStatement("INSERT INTO Trade VALUES(?,?,?,?,?,?)");
                 pS.setInt(1,Integer.parseInt(row[0]));
                 pS.setInt(2,Integer.parseInt(row[1]));
                 pS.setInt(3,Integer.parseInt(row[2]));
@@ -286,7 +286,7 @@ public class TradeDao extends DBDao
                 pS.setDate(5,Date.valueOf(row[4]));
                 pS.setInt(6,Integer.parseInt(row[5]));
                 boolean b = pS.execute();
-                if (b)
+                if (!b)
                 {
                     System.out.println("插入成功！");
                 }

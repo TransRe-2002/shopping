@@ -1,4 +1,5 @@
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Express extends DBDao
@@ -91,22 +92,27 @@ public class Express extends DBDao
         String ECname = null;
         try
         {
-            PreparedStatement pS = getConnection().prepareStatement("SELECT ? FROM ? WHERE ? = ?");
-            pS.setString(1,"Cuname");
-            pS.setString(2,"Customer");
-            pS.setString(3,"Cuno");
-            pS.setInt(4,Cuno);
-            Cuname = pS.executeQuery().getString(1);
-            pS.setString(1,"Crname");
-            pS.setString(2,"Courier");
-            pS.setString(3,"Crno");
-            pS.setInt(4,Crno);
-            Crname = pS.executeQuery().getString(1);
-            pS.setString(1,"ECname");
-            pS.setString(2,"Express_Company");
-            pS.setString(3,"ECno");
-            pS.setInt(4,ECno);
-            ECname = pS.executeQuery().getString(1);
+            PreparedStatement pS = getConnection().prepareStatement("SELECT Cuname FROM Customer WHERE Cuno = ?");
+            pS.setInt(1,Cuno);
+            ResultSet rS = pS.executeQuery();
+            while (rS.next() && rS.getString(1) != null)
+            {
+                Cuname = rS.getString(1);
+            }
+            pS = getConnection().prepareStatement("SELECT Crname FROM Courier WHERE Crno = ?");
+            pS.setInt(1,Crno);
+            rS = pS.executeQuery();
+            while (rS.next() && rS.getString(1) != null)
+            {
+                Crname = rS.getString(1);
+            }
+            pS = getConnection().prepareStatement("SELECT ECname FROM Express_Company WHERE ECno = ?");
+            pS.setInt(1,ECno);
+            rS = pS.executeQuery();
+            while (rS.next() && rS.getString(1) != null)
+            {
+                ECname = rS.getString(1);
+            }
         }
         catch (SQLException e)
         {

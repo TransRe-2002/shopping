@@ -15,7 +15,7 @@ public class ExpressDao extends DBDao
             var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Customer WHERE Cuno = ? LIMIT 1");
             pS.setInt(1,Eno);
             var result = pS.executeQuery();
-            while (result.next())
+            while (result.next() && result.getInt(1) != 1)
             {
                 System.out.println("快递编号不存在，请重新输入！");
                 Eno = getIntNumber();
@@ -271,7 +271,7 @@ public class ExpressDao extends DBDao
                 pS.setInt(5,Integer.parseInt(row[3]));
                 pS.setString(6,row[4]);
                 boolean b = pS.execute();
-                if (b)
+                if (!b)
                 {
                     System.out.println("插入成功！");
                 }

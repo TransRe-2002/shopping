@@ -15,7 +15,7 @@ public class CommodityDao extends DBDao
             var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Commodity WHERE Cono = ? LIMIT 1");
             pS.setInt(1, Cono);
             var result = pS.executeQuery();
-            while (result.next())
+            while (result.next() && result.getInt(1) != 1)
             {
                 System.out.println("商品编号不存在，请重新输入！");
                 Cono = getIntNumber();
@@ -271,11 +271,11 @@ public class CommodityDao extends DBDao
                 pS = getConnection().prepareStatement("INSERT INTO Commodity VALUES(?,?,?,?,?)");
                 pS.setInt(1, Integer.parseInt(row[0]));
                 pS.setString(2, row[1]);
-                pS.setString(3, row[2]);
+                pS.setInt(3, Integer.parseInt(row[2]));
                 pS.setString(4, row[3]);
-                pS.setInt(5, Integer.parseInt(row[5]));
+                pS.setInt(5, Integer.parseInt(row[4]));
                 boolean b = pS.execute();
-                if (b)
+                if (!b)
                 {
                     System.out.println("插入成功！");
                 }

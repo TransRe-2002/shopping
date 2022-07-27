@@ -15,7 +15,7 @@ public class CustomerDao extends DBDao
             var pS = getConnection().prepareStatement("SELECT COUNT(*) FROM Customer WHERE Cuno = ? LIMIT 1");
             pS.setInt(1, Cuno);
             var result = pS.executeQuery();
-            while (result.next())
+            while (result.next() && result.getInt(1) != 1)
             {
                 System.out.println("客户编号不存在，请重新输入！");
                 Cuno = getIntNumber();
@@ -35,7 +35,6 @@ public class CustomerDao extends DBDao
     {
         System.out.println("输入要查询的客户的编号：");
         int Cuno = inputCuno();
-        PreparedStatement pS = null;
         Customer cust = null;
         try
         {
@@ -231,7 +230,7 @@ public class CustomerDao extends DBDao
                 pS.setString(2,row[1]);
                 pS.setString(3,row[2]);
                 boolean b = pS.execute();
-                if (b)
+                if (!b)
                 {
                     System.out.println("插入成功！");
                 }
